@@ -1,0 +1,15 @@
+TELEVIZO LAUNCHER - APK yaratmaq (Android Studio olmadan)
+
+1. GitHub hesabına daxil ol: https://github.com
+2. New repository seç. Ad: TelevizoLauncher. Private seçmək olar.
+3. Repository yaratdıqdan sonra Add file > Upload files seç.
+4. Bu qovluğun İÇİNDƏKİ bütün fayl və qovluqları yüklə. .github qovluğunu da daxil et.
+5. Commit changes et. GitHub Actions avtomatik build başlayacaq.
+6. Repository-də Actions bölməsinə keç, "Build Televizo Launcher APK" workflow-nu aç.
+7. Yaşıl işarə göründükdən sonra həmin run səhifəsinin aşağısında Artifacts bölməsindən TelevizoLauncher-debug-apk faylını endir.
+8. ZIP-i aç. app-debug.apk faylını Mac-da Downloads qovluğuna qoy.
+9. Mac Terminal:
+   adb -s 192.168.100.39:39633 install -r ~/Downloads/app-debug.apk
+
+Qeyd: Bu, debug imzalı test APK-sıdır. Televizo paketi com.ottplay.ottplay olmalıdır.
+Bu tətbiq yalnız Televizo-nu başlatmaq üçün qısayoldur; Prime Video düyməsini özü remap etmir.
